@@ -35,5 +35,5 @@ cls
 goto ie
 
 :e
-Title PyPy-Batch e
+title PyPy-Batch exit
 timeout 3
