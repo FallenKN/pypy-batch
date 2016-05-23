@@ -16,7 +16,7 @@ set /p CHOICE= Do you want to download PyPy 5.1.1? y/n:
 IF /I "%CHOICE%"=="y" (goto dl) else goto e
 
 :dl
-bitsadmin.exe /TRANSFER "Downloading wget, please wait..." http://fallenkn.cf/files/wget.exe "%CD%\wget.exe"
+bitsadmin.exe /TRANSFER "Downloading wget, please wait..." /DOWNLOAD http://fallenkn.cf/files/wget.exe "%CD%\wget.exe"
 cls
 call wget.exe http://fallenkn.cf/files/7za.exe
 cls
