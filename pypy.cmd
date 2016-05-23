@@ -3,7 +3,7 @@ Title Pypy-Batch
 goto ie
 
 :ie
-IF EXIST "%cd%\pypy-5.1.1-win32\pypy.exe" (goto start) else goto nf
+IF EXIST "%cd%\pypy-5.1.1-win32\pypy.exe" (goto f) else goto nf
 
 :f
 set PYPY="%cd%/pypy-5.1.1-win32/pypy.exe"
@@ -13,9 +13,9 @@ call %PYPY% %PYFILE%
 :nf
 echo PyPy directory not found
 set /p CHOICE= Do you want to download pypy? y/n: 
-IF /I "%CHOICE%"=="y" (goto download) else goto end
+IF /I "%CHOICE%"=="y" (goto dl) else goto e
 
-:download
+:dl
 bitsadmin.exe /transfer "Downloading wget, please wait..." http://fallenkn.cf/files/wget.exe "%cd%\wget.exe"
 cls
 call wget.exe http://fallenkn.cf/files/7za.exe
@@ -30,5 +30,5 @@ del /Q "%cd%/pypy-5.1.1-win32.zip"
 cls
 goto ie
 
-:end
+:e
 timeout 3
