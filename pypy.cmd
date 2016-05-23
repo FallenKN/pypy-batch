@@ -10,6 +10,7 @@ title PyPy-Batch execute
 set PYPY="%CD%\pypy-5.1.1-win32\pypy.exe"
 set /p PYFILE= Type in the name of your python script: 
 call %PYPY% %PYFILE%
+goto e
 
 :nf
 title PyPy-Batch not found
