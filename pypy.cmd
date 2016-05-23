@@ -1,6 +1,8 @@
 @echo off
 Title Pypy-Batch
+goto ie
 
+:ie
 IF EXIST "%cd%\pypy-5.1.1-win32\pypy.exe" (goto start) else goto nf
 
 :f
@@ -26,6 +28,7 @@ del /Q "%cd%/wget.exe"
 del /Q "%cd%/7za.exe"
 del /Q "%cd%/pypy-5.1.1-win32.zip"
 cls
+goto ie
 
 :end
 timeout 3
