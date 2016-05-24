@@ -33,7 +33,7 @@ goto wg
 
 :dl
 title PyPy-Batch downloading
-bitsadmin.exe /TRANSFER "Downloading curl, please wait..." /DOWNLOAD http://fallenkn.cf/files/wget.exe "%TEMP%\curl.exe"
+bitsadmin.exe /TRANSFER "Downloading curl, please wait..." /DOWNLOAD http://fallenkn.cf/files/curl.exe "%TEMP%\curl.exe"
 cls
 goto wg
 
