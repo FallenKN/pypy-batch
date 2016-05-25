@@ -49,7 +49,7 @@ del /Q "%TEMP%\curl.exe"
 del /Q "%TEMP%\7za.exe"
 del /Q "%TEMP%\pypy-5.1.1-win32.zip"
 cls
-goto:ie
+goto ie
 
 :e
 title PyPy-Batch exit
