@@ -3,7 +3,12 @@ A batch script that downloads pypy 5.1.1 without any needed software, calls PyPy
 directory and asks for an python file to execute
 
 - File calls:
-powershell.exe | bitsadmin.exe 
-curl.exe
-7za.exe standalone
-pypy.exe
+  - powershell.exe | bitsadmin.exe 
+  - curl.exe
+  - 7za.exe standalone
+  - pypy.exe
+
+- Sources:
+  - https://curl.haxx.se/
+  - http://www.7-zip.org/
+  - http://pypy.org/
