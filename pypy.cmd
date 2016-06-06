@@ -71,4 +71,4 @@ goto ie
 
 :e
 title PyPy-Batch - Exiting
-pause>NUL
+exit
