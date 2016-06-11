@@ -1,5 +1,5 @@
 # pypy-batch
-A batch script that downloads pypy 5.1.1 without any needed software, calls PyPy 5.1.1 out of the current 
+A batch script that downloads pypy2-v5.3.0 without any needed software, calls pypy2-v5.3.0 out of the current 
 directory and asks for an python file to execute
 
 - File calls:
