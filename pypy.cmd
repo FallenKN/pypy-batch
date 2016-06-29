@@ -9,8 +9,17 @@ IF EXIST "%CD%\pypy2-v5.3.0-win32\pypy.exe" (goto f) else goto nf
 :l
 title PyPy-Batch - Another one
 set CHOICE= "n"
-set /p CHOICE= Do you want to execute an Script? y/n: 
-IF /I "%CHOICE%"== "y" (goto f) else goto e
+set /p CHOICE= Do you want to execute an Script? y/n/r: 
+IF /I "%CHOICE%"== "y" (goto f)
+IF /I "%CHOICE%"== "r" (goto re)
+IF /I "%CHOICE%"== "n" (goto e)
+goto e
+
+:re
+title PyPy-Batch - Executing Scripts
+cls
+call %PYPY% %PYFILE%
+goto l
 
 :f
 title PyPy-Batch - Executing Scripts
