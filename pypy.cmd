@@ -4,7 +4,7 @@ goto ie
 
 :ie
 title PyPy-Batch - Searching for PyPy
-IF EXIST "%CD%\pypy2-v5.3.0-win32\pypy.exe" (goto f) else goto nf
+IF EXIST "%CD%\pypy2-v5.6.0-win32\pypy.exe" (goto f) else goto nf
 
 :l
 title PyPy-Batch - Another one
@@ -23,7 +23,7 @@ goto l
 
 :f
 title PyPy-Batch - Executing Scripts
-set PYPY="%CD%\pypy2-v5.3.0-win32\pypy.exe"
+set PYPY="%CD%\pypy2-v5.6.0-win32\pypy.exe"
 set /p PYFILE= Type in the name of your python script: 
 cls
 call %PYPY% %PYFILE%
@@ -31,9 +31,9 @@ goto l
 
 :nf
 title PyPy-Batch - PyPy not found
-echo Sorry I was not able to find pypy2-v5.3.0-win32 in your Directory "%CD%"
+echo Sorry I was not able to find pypy2-v5.6.0-win32 in your Directory "%CD%"
 set CHOICE= "n"
-set /p CHOICE= Do you want to download pypy2-v5.3.0-win32? y/n: 
+set /p CHOICE= Do you want to download pypy2-v5.6.0-win32? y/n: 
 IF /I "%CHOICE%"== "y" (goto cp) else goto e
 
 :cp
@@ -67,16 +67,16 @@ cls
 title PyPy-Batch - Downloading 'PyPy' via curl
 echo Both of these Downloads could take a while, give it atleast up to 2 minutes.. (2/2)
 echo.
-call %TEMP%\curl.exe "http://buildbot.pypy.org/mirror/pypy2-v5.3.0-win32.zip" -o "%TEMP%\pypy2-v5.3.0-win32.zip"
+call %TEMP%\curl.exe "http://buildbot.pypy.org/mirror/pypy2-v5.6.0-win32.zip" -o "%TEMP%\pypy2-v5.6.0-win32.zip"
 timeout 1>NUL
 cls
 title PyPy-Batch - Extracting 'PyPy' via 7za
-call %TEMP%\7za.exe x -y "%TEMP%\pypy2-v5.3.0-win32.zip" -o"%CD%\"
+call %TEMP%\7za.exe x -y "%TEMP%\pypy2-v5.6.0-win32.zip" -o"%CD%\"
 cls
 title PyPy-Batch - Deleting temporary files
 del /Q "%TEMP%\curl.exe"
 del /Q "%TEMP%\7za.exe"
-del /Q "%TEMP%\pypy2-v5.3.0-win32.zip"
+del /Q "%TEMP%\pypy2-v5.6.0-win32.zip"
 cls
 goto ie
 
